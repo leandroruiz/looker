@@ -13,6 +13,7 @@ view: analytics_fsr {
   }
 
   dimension: fsr {
+    primary_key: yes
     type: string
     sql: ${TABLE}.FSR ;;
   }

@@ -12,7 +12,14 @@ persist_with: leandro_bq_default_datagroup
 
 explore: analytics_fsr {}
 
-explore: salesforce {}
+explore: salesforce {
+  join: analytics_fsr {
+    foreign_key: opportunity_owner__full_name
+    relationship: many_to_one # Could be excluded since many_to_one is the default
+    type: left_outer          # Could be excluded since left_outer is the default
+  }
+
+}
 
 explore: salesforce_detail {
   join: analytics_fsr_master {
