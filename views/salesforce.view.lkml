@@ -147,7 +147,7 @@ view: salesforce {
     type: sum
     value_format: "$#,##0,\" K\""
     drill_fields: [account_name__account_name,opportunity_name,forecast_category,close_quarter,opportunity_id]
-    sql: ${total_solution_value}*12/(CASE WHEN ${term__months_} =0 THEN 12 ELSE ${term__months_} END)} ;;
+    sql: ${total_solution_value}*12/(CASE WHEN ${term__months_} =0 THEN 12 ELSE ${term__months_} END) ;;
   }
 
   dimension: total_solution_value_currency {

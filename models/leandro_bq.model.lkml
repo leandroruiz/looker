@@ -13,6 +13,11 @@ persist_with: leandro_bq_default_datagroup
 explore: analytics_fsr {}
 
 explore: salesforce {
+  join: previous_date {
+    foreign_key: salesforce.snapshot_date
+    relationship: many_to_one # Could be excluded since many_to_one is the default
+    type: inner          # Could be excluded since left_outer is the default
+  }
   join: analytics_fsr {
     foreign_key: opportunity_owner__full_name
     relationship: many_to_one # Could be excluded since many_to_one is the default
