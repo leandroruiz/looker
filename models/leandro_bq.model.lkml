@@ -42,6 +42,8 @@ explore: salesforce_detail_previous {join: analytics_fsr_master {
 
 explore: vector_quality_problems {}
 
+explore: salesforce_looker {}
+
 explore: modified_records {}
 
 explore: salesforce_opportunity {}
