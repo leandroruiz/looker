@@ -4,6 +4,7 @@ view: vector_quality_problems {
 
   dimension: account_name__account_name {
     type: string
+    label: "Account Name"
     sql: ${TABLE}.Account_Name__Account_Name ;;
   }
 
@@ -15,6 +16,7 @@ view: vector_quality_problems {
   measure: amount_sum {
     type: sum
     value_format: "$#,##0,\" K\""
+    label: "TCV"
     drill_fields: [opportunity_name,forecast_category,analytic_fsr,close_quarter,amount_sum]
     sql: ${amount} ;;
   }
@@ -36,6 +38,7 @@ view: vector_quality_problems {
   measure: annual_contract_value_sum {
     type: sum
     value_format: "$#,##0,\" K\""
+    label: "ACV"
     drill_fields: [opportunity_name,forecast_category,analytic_fsr,close_quarter,annual_contract_value_sum]
     sql: ${annual_contract_value} ;;
   }
@@ -104,6 +107,7 @@ view: vector_quality_problems {
 
   dimension: opportunity_owner__full_name {
     type: string
+    label: "Opportunity Owner"
     sql: ${TABLE}.Opportunity_Owner__Full_Name ;;
   }
 
