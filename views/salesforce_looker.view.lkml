@@ -4,6 +4,7 @@ view: salesforce_looker {
 
   dimension: account_name__account_name {
     type: string
+    label: "Account Name"
     sql: ${TABLE}.Account_Name__Account_Name ;;
   }
 
@@ -103,6 +104,7 @@ view: salesforce_looker {
 
   dimension: opportunity_owner__full_name {
     type: string
+    label: "Opportunity Owner"
     sql: ${TABLE}.Opportunity_Owner__Full_Name ;;
   }
 

@@ -4,6 +4,7 @@ view: salesforce_opportunity {
 
   dimension: account_name__account_name {
     type: string
+    label: "Account Name"
     sql: ${TABLE}.Account_Name ;;
   }
 
@@ -78,6 +79,7 @@ view: salesforce_opportunity {
 
   dimension: opportunity_owner__full_name {
     type: string
+    label: "Opportunity Owner"
     sql: ${TABLE}.Opportunity_Owner ;;
   }
 

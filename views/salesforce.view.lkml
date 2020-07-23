@@ -4,17 +4,20 @@ view: salesforce {
 
   dimension: account_name__account_name {
     type: string
+    label: "Account Name"
     sql: ${TABLE}.Account_Name__Account_Name ;;
   }
 
   dimension: amount {
     type: number
+    label: "TCV"
     sql: ${TABLE}.Amount ;;
   }
 
   measure: amount_sum {
     type: sum
     value_format: "$#,##0,\" K\""
+    label: "TCV"
     drill_fields: [account_name__account_name,opportunity_name,forecast_category,close_quarter,opportunity_id]
     sql: ${amount} ;;
   }
@@ -42,6 +45,7 @@ view: salesforce {
   measure: annual_contract_value_sum {
     type: sum
     value_format: "$#,##0,\" K\""
+    label: "ACV"
     drill_fields: [account_name__account_name,opportunity_name,forecast_category,close_quarter,opportunity_id,amount,annual_contract_value,amount_sum,annual_contract_value_sum]
     sql: ${amount}*12/(CASE WHEN ${term__months_} =0 THEN 12 ELSE ${term__months_} END) ;;
   }
@@ -98,6 +102,7 @@ view: salesforce {
 
   dimension: opportunity_owner__full_name {
     type: string
+    label: "Opportunity Owner"
     sql: ${TABLE}.Opportunity_Owner__Full_Name ;;
   }
 

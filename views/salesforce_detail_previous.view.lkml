@@ -11,6 +11,7 @@ view: salesforce_detail_previous {
 
   dimension: account_name__account_name {
     type: string
+    label: "Account Name"
     sql: ${TABLE}.Account_Name__Account_Name ;;
   }
 
@@ -50,6 +51,7 @@ view: salesforce_detail_previous {
   measure: analyitcs_amt_sum {
     type: sum
     value_format: "$#,##0,\" K\""
+    label: "Analytics ACV"
     drill_fields: [opportunity_name, forecast_category,opportunity_record_type, analytic_fsr,close_quarter,analyitcs_amt_sum, opportunity_id]
     sql: ${analytics_amt} ;;
   }
@@ -106,6 +108,7 @@ view: salesforce_detail_previous {
 
   dimension: opportunity_owner__full_name {
     type: string
+    label: "Opportuntiy Owner"
     sql: ${TABLE}.Opportunity_Owner__Full_Name ;;
   }
 
