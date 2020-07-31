@@ -26,6 +26,11 @@ view: salesforce_opportunity {
     sql: ${analytics_amt} ;;
   }
 
+  dimension: analytic_fsr {
+    type: string
+    sql: ${TABLE}.Analytic_FSR ;;
+  }
+
   dimension_group: close {
     type: time
     timeframes: [
