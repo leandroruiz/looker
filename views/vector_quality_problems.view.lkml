@@ -21,34 +21,12 @@ view: vector_quality_problems {
     sql: ${amount} ;;
   }
 
-  dimension: amount_currency {
-    type: string
-    sql: ${TABLE}.Amount_Currency ;;
-  }
 
   dimension: analytic_fsr {
     type: string
     sql: ${TABLE}.Analytic_FSR ;;
   }
 
-  dimension: annual_contract_value {
-    type: string
-    sql: ${TABLE}.Annual_Contract_Value ;;
-  }
-  measure: annual_contract_value_sum {
-    type: sum
-    value_format: "$#,##0,\" K\""
-    label: "ACV"
-    drill_fields: [opportunity_name,forecast_category,analytic_fsr,close_quarter,annual_contract_value_sum]
-    sql: ${annual_contract_value} ;;
-  }
-
-
-
-  dimension: annual_contract_value_currency {
-    type: string
-    sql: ${TABLE}.Annual_Contract_Value_Currency ;;
-  }
 
   dimension_group: close {
     type: time
@@ -65,10 +43,6 @@ view: vector_quality_problems {
     sql: ${TABLE}.Close_Date ;;
   }
 
-  dimension: comp_product_factor {
-    type: number
-    sql: ${TABLE}.Comp_Product_Factor ;;
-  }
 
   dimension_group: created {
     type: time
@@ -116,19 +90,10 @@ view: vector_quality_problems {
     sql: ${TABLE}.Opportunity_Owner__Pod_Micro_Region ;;
   }
 
-  dimension: opportunity_owner__sub_region {
-    type: string
-    sql: ${TABLE}.Opportunity_Owner__Sub_Region ;;
-  }
 
   dimension: opportunity_record_type {
     type: string
     sql: ${TABLE}.Opportunity_Record_Type ;;
-  }
-
-  dimension: pillar {
-    type: string
-    sql: ${TABLE}.Pillar ;;
   }
 
   dimension: problema {
@@ -151,37 +116,11 @@ view: vector_quality_problems {
     sql: ${TABLE}.Snapshot_Date ;;
   }
 
-  dimension: solution {
-    type: string
-    sql: ${TABLE}.Solution ;;
-  }
-
   dimension: term__months_ {
     type: number
     sql: ${TABLE}.Term__Months_ ;;
   }
 
-  dimension: total_solution_value {
-    type: number
-    sql: ${TABLE}.Total_Solution_Value ;;
-  }
-
-  measure: total_solution_value_sum {
-    type: sum
-    value_format: "$#,##0,\" K\""
-    drill_fields: [opportunity_name,forecast_category,analytic_fsr,close_quarter,total_solution_value_sum]
-    sql: ${total_solution_value} ;;
-  }
-
-  dimension: total_solution_value_currency {
-    type: string
-    sql: ${TABLE}.Total_Solution_Value_Currency ;;
-  }
-
-  dimension: use_case {
-    type: string
-    sql: ${TABLE}.Use_Case ;;
-  }
 
   measure: count {
     type: count
