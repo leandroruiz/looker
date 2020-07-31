@@ -22,7 +22,7 @@ view: salesforce_opportunity {
     type: sum
     label: "Analytcs ACV"
     value_format: "$#,##0,\" K\""
-    drill_fields: [opportunity_name,forecast_category,close_quarter,amount_sum, analytics_amt_sum,opportunity_id]
+    drill_fields: [opportunity_name, forecast_category,opportunity_record_type, analytic_fsr,close_quarter,analytics_amt_sum, opportunity_id]
     sql: ${analytics_amt} ;;
   }
 
