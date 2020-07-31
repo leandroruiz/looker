@@ -131,6 +131,15 @@ view: salesforce_opportunity {
     sql: ${amount} *12/term__months_;;
   }
 
+
+  measure: non_analytics_acv_sum {
+    type: sum
+    label: "Other ACV"
+    value_format: "$#,##0,\" K\""
+    drill_fields: [opportunity_name,forecast_category,opportunity_record_type,close_quarter,opportunity_id,annual_contract_amount_sum]
+    sql: ${amount} *12/term__months_-${analytics_amt};;
+  }
+
   measure: count {
     type: count
     drill_fields: [opportunity_name, account_name__account_name, opportunity_owner__full_name]
