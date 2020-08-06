@@ -149,6 +149,12 @@ view: salesforce_detail {
     sql: ${priority_workloads_amt} ;;
   }
 
+  measure: non_priority_workloads_sum {
+    type: sum
+    label: "Priority ACV"
+    value_format: "$#,##0,\" K\""
+    sql: ${analytics_amt}-${priority_workloads_amt} ;;
+  }
 
   measure: count {
     type: count
