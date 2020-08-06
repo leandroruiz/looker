@@ -137,6 +137,19 @@ view: salesforce_detail {
     sql: ${TABLE}.Vector_Quality ;;
   }
 
+  dimension: priority_workloads_amt {
+    type: number
+    sql: ${TABLE}.Priority_Workloads_Amt ;;
+  }
+
+  measure: priority_workloads_sum {
+    type: sum
+    label: "Priority ACV"
+    value_format: "$#,##0,\" K\""
+    sql: ${priority_workloads_amt} ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: [opportunity_name, account_name__account_name, opportunity_owner__full_name]
