@@ -40,6 +40,12 @@ explore: salesforce_detail_previous {join: analytics_fsr_master {
     type: left_outer          # Could be excluded since left_outer is the default
   }}
 
+explore: salesforce_looker_previous {join: analytics_fsr_master {
+        foreign_key: analytic_fsr
+        relationship: many_to_one # Could be excluded since many_to_one is the default
+        type: left_outer          # Could be excluded since left_outer is the default
+      }}
+
 explore: vector_quality_problems {}
 
 explore: salesforce_looker {}
