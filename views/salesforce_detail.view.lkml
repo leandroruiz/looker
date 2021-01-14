@@ -163,7 +163,7 @@ view: salesforce_detail {
 
   measure: count {
     type: count
-    drill_fields: [opportunity_name, account_name__account_name, opportunity_owner__full_name]
+    drill_fields: [account_name__account_name,opportunity_name,opportunity_record_type, forecast_category,analytic_fsr,close_quarter,analyitcs_amt_sum,opportunity_id]
   }
 
 }
