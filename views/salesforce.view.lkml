@@ -70,7 +70,7 @@ view: salesforce {
     sql: ${TABLE}.Close_Date ;;
   }
 
-  dimension: comp_product_factor {
+  dimension: partner_name {
     type: number
     sql: ${TABLE}.Comp_Product_Factor ;;
   }
