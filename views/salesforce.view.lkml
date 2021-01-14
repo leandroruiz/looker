@@ -71,7 +71,7 @@ view: salesforce {
   }
 
   dimension: partner_name {
-    type: number
+    type: string
     sql: ${TABLE}.Comp_Product_Factor ;;
   }
 

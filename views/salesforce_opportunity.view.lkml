@@ -8,6 +8,12 @@ view: salesforce_opportunity {
     sql: ${TABLE}.Account_Name ;;
   }
 
+  dimension: partner_name {
+    type: string
+    label: "Partner_Name"
+    sql: ${TABLE}.Comp_Product_Factor ;;
+  }
+
   dimension: amount {
     type: number
     sql: ${TABLE}.Amount ;;
