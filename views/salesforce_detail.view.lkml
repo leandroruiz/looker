@@ -96,6 +96,11 @@ view: salesforce_detail {
     }
   }
 
+  dimension: partner_name {
+    type: string
+    label: "Partner_Name"
+    sql: ${TABLE}.Comp_Product_Factor ;;
+  }
   dimension: opportunity_name {
     type: string
     sql: ${TABLE}.Opportunity_Name ;;
